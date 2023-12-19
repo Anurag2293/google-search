@@ -10,10 +10,10 @@ const SearchState = (props) => {
     const getSearchResults = async () => {
 		const response = await fetch(`${SEARCH_URI}${searchQuery}`);
 		const result = await response.json();
-        setSearchResults(result.items);
+        return result.items;
 	}
 
-    return <SearchContext.Provider value={{searchQuery, setSearchQuery, searchResults, getSearchResults }}>
+    return <SearchContext.Provider value={{searchQuery, setSearchQuery, searchResults, setSearchResults, getSearchResults }}>
         {props.children}
     </SearchContext.Provider>
 }
