@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { useSearchParams } from "react-router-dom";
 
 import SearchContext from '../context/search/SearchContext'
+import SearchItem from '../components/SearchItem';
 
 const SearchResult = () => {
     const { searchResults, setSearchResults, getSearchResults } = useContext(SearchContext);
@@ -11,20 +12,20 @@ const SearchResult = () => {
         const searchQuery = searchParams.get('q');
         getSearchResults(searchQuery).then((response) => {
             setSearchResults(response);
+            console.log({response});
         });
     }, [searchParams])
 
     return (
         <>
             <h1>Search Result: {searchParams.get('q')}</h1>
-            {searchResults.length>0 && (
-				searchResults.map((item) => (
-					<div key={item.link}>
-						<h1>{item.title}</h1>
-						<p>{item.link}</p>
-					</div>
-				))
-			)}
+            <div className='search-result-container'>
+                {searchResults.length>0 && (
+                    searchResults.map((item) => (
+                        <SearchItem key={item.link} searchItem={item} />
+                    ))
+                )}
+            </div>
         </>
     )
 }
