@@ -1,7 +1,7 @@
 // icon:search-outline | Ionicons https://ionicons.com/ | Ionic Framework
 import * as React from "react";
 
-function GoogleSearchIcon(props) {
+function SearchIcon(props) {
     return (
         <svg
             viewBox="0 0 512 512"
@@ -29,4 +29,4 @@ function GoogleSearchIcon(props) {
     );
 }
 
-export default GoogleSearchIcon;
+export default SearchIcon;
