@@ -5,6 +5,7 @@ const SEARCH_URI = `https://www.googleapis.com/customsearch/v1?key=${import.meta
 
 const SearchState = (props) => {
     const [searchResults, setSearchResults] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
 
     const getSearchResults = async (searchQuery) => {
 		const response = await fetch(`${SEARCH_URI}${searchQuery}`);
@@ -12,7 +13,7 @@ const SearchState = (props) => {
         return result.items;
 	}
 
-    return <SearchContext.Provider value={{ searchResults, setSearchResults, getSearchResults }}>
+    return <SearchContext.Provider value={{ searchResults, setSearchResults, getSearchResults, searchQuery, setSearchQuery }}>
         {props.children}
     </SearchContext.Provider>
 }
