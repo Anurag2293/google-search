@@ -1,13 +1,15 @@
 import React, { useEffect, useContext } from 'react'
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 
 import SearchContext from '../context/search/SearchContext'
 import SearchItem from '../components/SearchItem';
 import SearchBar from '../components/SearchBar';
+import Navbar from '../components/Navbar';
 
 const SearchResult = () => {
     const { searchResults, setSearchResults, getSearchResults, setSearchQuery } = useContext(SearchContext);
     let [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const searchQuery = searchParams.get('q');
@@ -27,12 +29,15 @@ const SearchResult = () => {
     return (
         <div className='search-result-container'>
             <div className='search-header'>
-                <div className="search-logo">
+                <div className="search-logo" onClick={() => {navigate('/'); setSearchQuery('')}}>
                     <img alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>
                 </div>
                 <div className='search-bar-container'>
                     <SearchBar />
                 </div>
+            </div>
+            <div className='search-navbar'>
+                <Navbar />
             </div>
             <div className='search-data'>
                 {searchResults.length>0 && (
