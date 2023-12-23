@@ -16,7 +16,8 @@ const SearchResult = () => {
         setSearchQuery(searchQuery);
         getSearchResults(searchQuery).then((response) => {
             if (!response) {
-                throw new Error('No response from API');
+                alert("The Google API has an daily limit of 100 requests. Please try again tomorrow.")
+                return;
             }
             setSearchResults(response);
             console.log({response});
