@@ -7,7 +7,7 @@ import SearchBar from '../components/SearchBar';
 import Navbar from '../components/Navbar';
 
 const SearchResult = () => {
-    const { searchResults, setSearchResults, getSearchResults, setSearchQuery } = useContext(SearchContext);
+    const { searchResults, setSearchResults, getSearchResults, setSearchQuery, searchInformation } = useContext(SearchContext);
     let [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
 
@@ -39,6 +39,9 @@ const SearchResult = () => {
             </div>
             <div className='search-navbar'>
                 <Navbar />
+            </div>
+            <div className='search-information'>
+                <p>About {searchInformation.formattedTotalResults} results ({searchInformation.formattedSearchTime} seconds)</p>
             </div>
             <div className='search-data'>
                 {searchResults.length>0 && (

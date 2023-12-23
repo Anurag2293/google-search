@@ -180,6 +180,10 @@
     margin: 0;
 }
 
+.search-information {
+    display: none;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -282,6 +286,34 @@
     .menu {
         padding: 0 2rem;
     }
+
+    .search-information {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        width: 75%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .search-information p {
+        color: #797D82;
+        font-size: 0.9rem;
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+        padding: 0.5rem 0.5rem 0;
+    }
+
+    .search-information {
+        width: 100%;
+        display: block;
+        margin-left: 1.75rem;
+        margin-top: 0.5rem;
+    }
 }
 
 /* DESKTOP MEDIA QUERY */
@@ -341,6 +373,22 @@
 
     .menu {
         padding: 0 13rem;
+    }
+
+    .search-information {
+        width: 100%;
+        display: block;
+        margin-left: 25rem;
+        margin-top: 0.5rem;
+    }
+
+    .search-information p {
+        color: #797D82;
+        font-size: 0.9rem;
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
     }
 }
 
