@@ -11,11 +11,16 @@ const SearchResult = () => {
 
     useEffect(() => {
         const searchQuery = searchParams.get('q');
-        // console.log({searchQuery});
         setSearchQuery(searchQuery);
         getSearchResults(searchQuery).then((response) => {
+            if (!response) {
+                throw new Error('No response from API');
+            }
             setSearchResults(response);
             console.log({response});
+        })
+        .catch((error) => {
+            console.log({error});
         });
     }, [searchParams])
 
@@ -40,4 +45,4 @@ const SearchResult = () => {
     )
 }
 
-export default SearchResult
+export default SearchResult;

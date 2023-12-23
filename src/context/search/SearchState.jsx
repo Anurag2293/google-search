@@ -10,6 +10,7 @@ const SearchState = (props) => {
     const getSearchResults = async (searchQuery) => {
 		const response = await fetch(`${SEARCH_URI}${searchQuery}`);
 		const result = await response.json();
+        console.log({result});
         return result.items;
 	}
 
