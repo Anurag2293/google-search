@@ -18,7 +18,7 @@ const SearchBar = () => {
                 placeholder="Search Google or type a URL"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && navigate(`/search?q=${searchQuery}`)}
+                onKeyPress={(e) => e.key === 'Enter' && navigate(`/search?q=${searchQuery.split(' ').join('+')}`)}
             />
             <a href="#">
                 <img 

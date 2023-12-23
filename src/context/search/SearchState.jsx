@@ -8,6 +8,7 @@ const SearchState = (props) => {
     const [searchResults, setSearchResults] = useState([]);
     const [searchInformation, setSearchInformation] = useState({});
 
+    // fetch search results from the Google API
     const getSearchResults = async (searchQuery) => {
 		const response = await fetch(`${SEARCH_URI}${searchQuery}`);
 		const result = await response.json();
@@ -17,6 +18,7 @@ const SearchState = (props) => {
         return result.items;
 	}
 
+    // return a Provider component with the value prop set to an object containing the searchResults, setSearchResults, getSearchResults, searchQuery, setSearchQuery, and searchInformation
     return <SearchContext.Provider value={{ searchResults, setSearchResults, getSearchResults, searchQuery, setSearchQuery, searchInformation }}>
         {props.children}
     </SearchContext.Provider>
