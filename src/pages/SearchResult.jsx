@@ -28,6 +28,7 @@ const SearchResult = () => {
                 }
                 setApiQuotaLeft(true);
                 setSearchResults(response);
+                document.title = `${searchQuery} - Google Search`;
             } catch (error) {
                 console.log({ error });
             }
