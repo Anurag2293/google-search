@@ -13,7 +13,6 @@ const SearchItem = ({ searchItem }) => {
         <div className='search-item-container'>
             <a href={searchItem.link} target='_blank' >
                 <div className='search-item-site-details'>
-                    {/* <img className='search-item-image' src={searchItem.pagemap.metatags[0]["og:image"]} alt="Image" /> */}
                     <img className='search-site-image' src={`https://logo.clearbit.com/${searchItem.displayLink}`} alt={`${company} logo`} />
                     <div className='search-site-caption'>
                         <p className='search-site-text'>{company}</p>

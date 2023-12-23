@@ -37,6 +37,7 @@
     height: 45px;
     border: none;
     width: 80%;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
     outline: none;
     background-color: white;
@@ -121,6 +122,16 @@
 
 /* SEARCH ITEM COMPONENT */
 .search-item-container a:hover {
+    
+    .search-item-site-details {
+        text-decoration: none;
+    }
+
+    .search-site-caption p {
+        text-emphasis: none;
+        text-decoration: none;
+    }
+
     .search-item-title {
         text-decoration: underline;
     }
@@ -172,7 +183,7 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
-    color: #8AB4F8;
+    color: #1A0DAB;
 }
 
 .search-item-snippet {
@@ -193,7 +204,7 @@
 
 .navbar hr {
     border: none;
-    border-top: 0.5px solid grey;
+    border-top: 0.5px solid #EBEBEB;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -227,7 +238,6 @@
 .menu a.active {
     border-bottom: 0.25rem solid #8AB4F8;
     color: #8AB4F8;
-
 }
 
 /* TABLET MEDIA QUERY */
@@ -312,7 +322,7 @@
         width: 100%;
         display: block;
         margin-left: 1.75rem;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 }
 
@@ -380,6 +390,7 @@
         display: block;
         margin-left: 25rem;
         margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 
     .search-information p {
@@ -409,7 +420,6 @@
     .input-bar {
         background-color: #404040;
         color: white;
-        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     }
 
     .home-buttons button {
@@ -421,5 +431,17 @@
         margin: 5px;
         border-radius: 4px;
         outline: none;
+    }
+
+    .navbar hr {
+        border: none;
+        border-top: 0.5px solid grey;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .search-item-title {
+        color: #8AB4F8;
     }
 }
