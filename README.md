@@ -1,8 +1,10 @@
-# React + Vite
+# Google Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SETUP**
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone this repository in your local system
+2. Create a `.env` file in root folder.
+3. Add two variables named VITE_SEARCH_API_KEY and VITE_SEARCH_ENGINE_ID.
+4. Create and get Programmable search engine ID from here : https://programmablesearchengine.google.com/controlpanel/all and assign to VITE_SEARCH_ENGINE_ID
+5. Get and assign ID of Custom Search JSON API from here: https://developers.google.com/custom-search/v1/overview
+6. Run `npm run dev`
