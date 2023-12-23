@@ -13,7 +13,9 @@ const Home = () => {
             <div className="logo">
                 <img alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>
             </div>
-            <SearchBar />
+            <div className='home-search-section'>
+                <SearchBar />
+            </div>
             <div className="home-buttons">
                 <button 
                     className="button" 
